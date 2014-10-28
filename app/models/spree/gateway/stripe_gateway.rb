@@ -68,6 +68,10 @@ module Spree
       end
     end
 
+    def cancel(response_code)
+      provider.void(response_code)
+    end
+
     private
 
     # In this gateway, what we call 'secret_key' is the 'login'
